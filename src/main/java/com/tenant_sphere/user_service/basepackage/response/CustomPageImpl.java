@@ -1,0 +1,26 @@
+package com.tenant_sphere.user_service.basepackage.response;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import lombok.Builder;
+import lombok.Data;
+
+import java.util.List;
+
+@Builder
+@Data
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class CustomPageImpl {
+
+	private Long totalElements;
+
+	private Integer totalPages;
+
+	private Integer size;
+
+	private Integer number;
+
+	private Integer numberOfElements;
+
+	private List<?> content;
+
+}
